@@ -40,6 +40,31 @@
 					alert("bad")
 				}
 			}
+			function random() {
+				var dic = new Array();
+				var url = "./json/keyvalue.json"
+				var request = new XMLHttpRequest();
+
+				request.open("GET", url);
+				request.send(null);
+
+				request.onload = function() {
+					if (request.status == 200) {
+						var json = JSON.parse(request.responseText);
+
+						var count = 0;
+						for (var key in json) {
+							dic[count] = key;
+							count += 1;
+						}
+						var num = Math.floor(Math.random() * dic.length);
+						window.location.href = "./html/" + dic[num] + ".html";
+
+					} else {
+						alert("有bug，无法加载,request.status =" + request.status);
+					}
+				}
+			}
 		</script>
 		<link rel="icon" href="./img/numpy.ico" />
 		<title>主页</title>
