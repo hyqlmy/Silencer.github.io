@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="./table.css"/> -->
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<script src="./js/query.js"></script>
+		<style type="text/css">
+			#bg {
+				background: url(img/bg.jpg);
+				background-size: cover;
+				width: 100%;
+				margin: 0px;
+				height: 800px;
+				background-repeat: no-repeat;
+				padding: 20px 0px;
+			}
+			#indexes {
+				cursor: pointer;
+				width: 200px;
+				height: 50px;
+				position: relative;
+				display: block;
+				text-align: center;
+				line-height: 50px;
+				background-color: skyblue;
+				font-size: 20px;
+				opacity: 0.5;
+				border-radius: 10px;
+				margin: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			function home() {
+				try {
+					window.location.href = "index.html";
+				} catch (e) {
+					alert("bad")
+				}
+			}
+		</script>
+		<link rel="icon" href="./img/numpy.ico" />
+		<title>主页</title>
+	</head>
+	<body>
+		<div class="sky" id="top">
+			<div class="clouds_one"></div>
+			<div class="clouds_two"></div>
+			<div class="clouds_three"></div>
+		</div>
+		<a href="#top">
+			<div id="pos">
+				<div class="lanren">
+					<ul>
+						<li><img src="./img/main5-pic1.png"> </li>
+						<li><img src="./img/main5-pic2.png"> </li>
+						<li><img src="./img/main5-pic3.png"> </li>
+					</ul>
+				</div>
+			</div>
+		</a>
+		<div id="header">
+			<div onclick="random()">
+				随机翻页
+			</div>
+			<div onclick="home()">
+				HOME
+			</div>
+			<form name="myform">
+				<input type="text" id="study" name="box" placeholder="输入需要检索的单词" />
+				<button onclick="show()">搜索</button>
+			</form>
+		</div>
+		<div id="bg" align="center">
+			<a href="./html/1index.html" id="indexes">主页1</a>
+			<a href="./html/2index.html" id="indexes">主页2</a>
+			<a href="./html/3index.html" id="indexes">主页3</a>
+			<a href="./html/4index.html" id="indexes">主页4</a>
+			<a href="./html/5index.html" id="indexes">主页5</a>
+			<a href="./html/6index.html" id="indexes">主页6</a>
+			<a href="./html/7index.html" id="indexes">主页7</a>
+			<a href="./html/8index.html" id="indexes">主页8</a>
+			<a href="./html/9index.html" id="indexes">主页9</a>
+			<a href="./html/10index.html" id="indexes">主页10</a>
+			<a href="./html/11index.html" id="indexes">主页11</a>
+		</div>
+	</body>
+</html>
